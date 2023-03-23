@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import api from '../../services/api'
+import housesHome from '../../images/houses.jpg'
+
 
 
 
@@ -28,17 +29,24 @@ const Home = () => {
 
 
   return (
+    
     <div>
+      <img src={housesHome} width='100%'/>
       <h1>Houses</h1>
       {houses.length === 0 ? <p>carregando...</p> : (
         houses.map((house) => (
           <div className='house' key={house.id}> 
+            
             <h2>{house.name}</h2>
             <h3>{house.animal}</h3>
           </div>
         ))
       )}
+    
+      
+      
     </div>
+    
   )
 }
 

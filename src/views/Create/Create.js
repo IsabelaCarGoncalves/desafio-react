@@ -1,9 +1,10 @@
 import React from 'react'
 
+import houses from '../../images/houses.jpg'
 const Create = () => {
   return (
     <div>
-      <h1>Create</h1>
+      <img src={houses} width='100%'/>
     </div>
   )
 }

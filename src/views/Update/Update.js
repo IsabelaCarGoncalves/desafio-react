@@ -1,10 +1,9 @@
 import React from 'react'
+import Login from '../../componentes/Login/Login'
 
 function Update() {
   return (
-    <div>
-      <h1>Update</h1>
-    </div>
+    <Login/>
   )
 }
 

@@ -1,10 +1,11 @@
 import React from 'react'
+import Posts from '../../componentes/Post/Post'
 
 const Delete = () => {
+
   return (
-    <div>
-      <h1>Delete</h1>
-    </div>
+    <Posts/>
+
   )
 }
 
