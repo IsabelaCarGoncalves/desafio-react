@@ -1,12 +1,9 @@
-import React from 'react'
-import Posts from '../../componentes/Post/Post'
+import React from "react";
+import Cadastro from "../../componentes/Cadastro/Cadastro"
 
 const Delete = () => {
-
-  return (
-    <Posts/>
-
+	return (
+  <Cadastro />
   )
-}
-
-export default Delete
+};
+export default Delete;

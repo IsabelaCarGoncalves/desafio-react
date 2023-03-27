@@ -1,9 +1,9 @@
 import React from 'react'
-import Login from '../../componentes/Login/Login'
+import Name from '../../componentes/Names/Names'
 
-function Update() {
+const Update = () => {
   return (
-    <Login/>
+    <Name/>
   )
 }
 

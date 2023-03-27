@@ -1,5 +1,6 @@
 import { Routes as Switch, Route, BrowserRouter} from "react-router-dom"
 import Navbar from "./componentes/Navbar/Navbar"
+// import Footer from "./componentes/Footer/Footer"
 import Create from './views/Create/Create'
 import Delete from './views/Delete/Delete'
 import Update from './views/Update/Update'
@@ -15,6 +16,7 @@ const Routes = () => {
         <Route path="/Update/" element={<Update/>} />
         <Route path="/Delete/" element={<Delete/>} />
       </Switch>
+      {/* <Footer/> */}
     </BrowserRouter>
   )
 }

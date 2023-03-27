@@ -1,11 +1,9 @@
 import React from 'react'
+import Table from '../../componentes/Table/Table'
 
-import houses from '../../images/houses.jpg'
 const Create = () => {
   return (
-    <div>
-      <img src={houses} width='100%'/>
-    </div>
+    <Table/>
   )
 }
 
