@@ -12,7 +12,12 @@ import Ravenclaw from "../../images/corvinal (1).webp";
 import Gryffindor from "../../images/grifinoria.webp";
 import Hufflepuff from "../../images/lufalufa.webp";
 import Slytherin from "../../images/sonserina.webp";
+
+
+
 import { Grid } from "@mui/material";
+
+
 
 const images = {
 	Ravenclaw: Ravenclaw,
@@ -50,6 +55,7 @@ const TableComponent = () => {
               key={house.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
+
                 <TableCell align="right">
                 <img
                   src={images[house.name]}

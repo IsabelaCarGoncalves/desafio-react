@@ -6,10 +6,7 @@ import Ravenclaw from "../../images/corvinal (1).webp";
 import Gryffindor from "../../images/grifinoria.webp";
 import Hufflepuff from "../../images/lufalufa.webp";
 import Slytherin from "../../images/sonserina.webp";
-
 import { Grid } from "@mui/material";
-
-
 
 const images = {
 	Ravenclaw: Ravenclaw,
@@ -18,7 +15,7 @@ const images = {
 	Slytherin: Slytherin,
 };
 
-const Name = () => {
+const Index = () => {
 	const [houses, setHouses] = useState([]);
 
 	useEffect(() => {
@@ -36,37 +33,30 @@ const Name = () => {
 			direction="row"
 			justifyContent="space-between"
 			alignItems="center"
+      padding={3}
 		>
 			{houses.length === 0 ? (
 				<Typography variant="p">carregando...</Typography>
 			) : (
 				houses.map((house) => (
-					<Card sx={{ maxWidth: 345 }} key={house.id}>
-						<CardMedia>
+					<Typography sx={{ maxWidth: 345 }} key={house.id} >
+						
+						<CardContent>
+							<Typography variant="h6">{house.name}</Typography>              
+						</CardContent>
+            <CardMedia>
 							<img
-								width={300}
+								width={200}
 								src={images[house.name]}
 								alt={`Escudo da casa ${house.name}`}
 							/>
 						</CardMedia>
-						<CardContent>
-							<Typography variant="h6" marginBottom={2}>{house.name}</Typography>
-              <Typography variant="body2">House Color - {house.houseColours}</Typography>
-              <Typography variant="body2">Element - {house.element}</Typography>
-              <Typography variant="body2">Ghost - {house.ghost}</Typography>
-              <Typography variant="body2">Founder - {house.founder}</Typography>
-              <Typography variant="body2">Animal - {house.animal}</Typography>
-						</CardContent>
-
-						<CardActions>
-							<Button size="small" color="info">
-              </Button>
-						</CardActions>
-					</Card>
+				
+					</Typography>
 				))
 			)}
 		</Grid>
 	);
 };
 
-export default Name;
+export default Index;

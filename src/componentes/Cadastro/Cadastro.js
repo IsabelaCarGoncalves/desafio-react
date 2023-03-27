@@ -18,8 +18,6 @@ import api from "../../services/api";
 import { ThemeProvider } from "@emotion/react";
 import { DarkTheme } from "../themes/theme";
 
-
-
 //Validando com YUP
 
 const validationPost = yup.object({
@@ -40,11 +38,8 @@ const Login = () => {
 		resolver: yupResolver(validationPost),
 	});
 
-
 	const addPost = (values) => console.log(values);
 
-
-	
 	//Chamando a API
 	const [houses, setHouses] = useState([]);
 
@@ -63,23 +58,16 @@ const Login = () => {
 		getHouses();
 	}, []);
 
-
-
 	return (
-
 		<ThemeProvider theme={DarkTheme}>
 			<Grid container item direction="row" xs={12}>
-				<Grid container item xs={6}></Grid>
-			
-
-				<Grid container item xs={7} justifyContent="center" alignItems="center">
+				<Grid container item xs={12} justifyContent="center" alignItems="center">
 					<Grid
 						padding="50px"
 						component="form"
 						border="1px solid black"
-						onSubmit={handleSubmit(addPost)}>
-
-
+						onSubmit={handleSubmit(addPost)}
+					>
 						<Grid mb={2} item xs={12}>
 							<TextField
 								id="standard-basic"
@@ -96,7 +84,6 @@ const Login = () => {
 							</Typography>
 						</Grid>
 
-
 						<Grid mb={2} item xs={12}>
 							<TextField
 								id="standard-basic"
@@ -112,7 +99,6 @@ const Login = () => {
 								{errors.lname?.message}
 							</Typography>
 						</Grid>
-
 
 						<Grid mb={2} item xs={12}>
 							<TextField
@@ -146,7 +132,6 @@ const Login = () => {
 							</Typography>
 						</Grid>
 
-
 						<Grid mb={2} item xs={12}>
 							<TextField
 								id="outlined-basic"
@@ -159,17 +144,14 @@ const Login = () => {
 						</Grid>
 						<Grid mb={3} item xs={12}>
 							<Typography variant="p" color="error">
-			
 								{errors.confirmpassword?.message}
 							</Typography>
 						</Grid>
-
 
 						<Box item sx={{ display: "flex" }}>
 							<Checkbox type="checkbox" name="checkbox" {...register("checkbox")} />
 							<Typography mt={1.3}>Remember me{errors.checkbox?.message}</Typography>
 						</Box>
-
 
 						<Grid item xs={12}>
 							<FormControl sx={{ mt: 5, mb: 5, minWidth: 210 }}>
@@ -181,11 +163,11 @@ const Login = () => {
 							</FormControl>
 						</Grid>
 						<Grid item xs={12}>
-						<Link href="/" color={"primary"}>
-									login
-								</Link>
+							<Link href="/" color={"primary"}>
+								login
+							</Link>
 							<Button variant="outlined" type="submit">
-							oi
+								oi
 							</Button>
 						</Grid>
 					</Grid>
